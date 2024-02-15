@@ -20,7 +20,12 @@
 
                 $timezone = new DateTimeZone(date_default_timezone_get());
 
-                $formatter = new IntlDateFormatter(Locale::getDefault(), IntlDateFormatter::MEDIUM, IntlDateFormatter::LONG, $timezone);
+                $formatter = new IntlDateFormatter(
+                    Locale::getDefault(),
+                    IntlDateFormatter::MEDIUM,
+                    IntlDateFormatter::LONG,
+                    $timezone
+                );
 
                 return $this->stringify(
                     $formatter->format(new DateTimeImmutable(
