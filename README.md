@@ -24,7 +24,7 @@
 
                 return $this->stringify(
                     $formatter->format(new DateTimeImmutable(
-                        $value->format('Y-m-d H:i:s.u'),
+                        $value->format("Y-m-d H:i:s.vp"),
                         $timezone
                     ))
                 );
